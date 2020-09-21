@@ -1,0 +1,17 @@
+FROM node:lts-alpine
+
+EXPOSE 3000
+
+WORKDIR /usr/src/app
+
+COPY package.json .
+COPY package-lock.json .
+
+RUN npm ci --production
+
+COPY backend/index.js ./backend
+COPY frontend/public ./frontend
+
+USER node
+
+ENTRYPOINT [ "npm" , "run", "start" ]

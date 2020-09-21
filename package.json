@@ -1,0 +1,19 @@
+{
+  "name": "generator-henriqueinonhe-react-webapp",
+  "version": "1.0.0",
+  "description": "Personal yeoman generator to set up react apps.",
+  "main": "index.js",
+  "files": [
+    "generators"
+  ],
+  "scripts": {
+  },
+  "keywords": [
+    "yeoman-generator"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "yeoman-generator": "^4.11.0"
+  }
+}
