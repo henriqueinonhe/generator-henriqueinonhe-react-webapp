@@ -3,7 +3,7 @@ const nodeExternals = require("webpack-node-externals");
 
 const config = type => env => ({
   mode: env.NODE_ENV,
-  entry: type === "frontend" ? "./frontend/src/App.tsx" : "./backend/src/index.ts",
+  entry: type === "frontend" ? "./frontend/src/Components/App.tsx" : "./backend/src/index.ts",
   output: type === "frontend" ? {
     path: path.resolve(__dirname, "./frontend/public"),
     filename: "bundle.js"
