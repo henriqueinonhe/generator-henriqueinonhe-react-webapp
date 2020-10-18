@@ -1,5 +1,6 @@
 const path = require("path");
 const nodeExternals = require("webpack-node-externals");
+const LiveReloadPlugin = require('webpack-livereload-plugin');
 
 const config = type => env => ({
   mode: env.NODE_ENV,
@@ -59,7 +60,10 @@ const config = type => env => ({
   resolve: {
     extensions: [".ts", ".js", ".json", ".tsx"],
     symlinks: false
-  }
+  },
+  plugins: [
+    new LiveReloadPlugin()
+  ] 
 });
 
 module.exports = [config("frontend"), config("backend")];
