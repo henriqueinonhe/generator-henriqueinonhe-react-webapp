@@ -22,9 +22,7 @@ module.exports = class extends Generator {
       "react",
       "react-dom",
       "styled-components"
-    ], {
-      "dev": true
-    });
+    ]);
 
     //Dev Dependencies
     this.npmInstall([
@@ -55,7 +53,7 @@ module.exports = class extends Generator {
       "eslint",
       "eslint-plugin-react",
       "@typescript-eslint/eslint-plugin",
-      "@typescript-esline/parser",
+      "@typescript-eslint/parser",
       //Babel
       "@babel/core",
       "@babel/preset-env",
