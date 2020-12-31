@@ -79,8 +79,7 @@ const config = env => {
         typescriptLoaderRule,
         babelLoaderRule,
         cssLoaderRule,
-        fileLoaderRule,
-        translationLoaderRule
+        fileLoaderRule
       ]
     },
     resolve: {

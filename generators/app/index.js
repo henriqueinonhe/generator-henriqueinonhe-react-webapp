@@ -36,6 +36,7 @@ module.exports = class extends Generator {
       "fork-ts-checker-webpack-plugin",
       "case-sensitive-paths-webpack-plugin",
       "@nenado/watch-missing-node-modules-plugin",
+      "webpack-dev-server",
       //Webpack Loaders
       "ts-loader",
       "babel-loader",

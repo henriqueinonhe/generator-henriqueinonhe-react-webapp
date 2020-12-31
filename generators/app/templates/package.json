@@ -13,14 +13,14 @@
         "preset": "jest-puppeteer"
     },
     "scripts": {
-        "dev-start": "webpack serve --env.NODE_ENV=development",
-        "prod-start": "webpack serve --env.NODE_ENV=development",
+        "dev-start": "webpack serve --env NODE_ENV=development",
+        "prod-start": "webpack serve --env NODE_ENV=development",
         "unit-test": "jest -t=\\[Unit\\] --collectCoverage",
         "integration-test": "jest -t=\\[Integration\\]",
         "ui-test": "jest -t=\\[UI\\]",
         "test": "jest --collectCoverage",
-        "dev-build": "webpack --env.NODE_ENV=development",
-        "prod-build": "webpack --env.NODE_ENV=production",
+        "dev-build": "webpack --env NODE_ENV=development",
+        "prod-build": "webpack --env NODE_ENV=production",
         "docs": "rm docs -rf && typedoc"
     }
 }
