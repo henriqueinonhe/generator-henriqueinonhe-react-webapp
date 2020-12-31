@@ -117,8 +117,8 @@
     "key-spacing": [
       "warn",
       {
-        "beforeColon": "false",
-        "afterColon": "true",
+        "beforeColon": false,
+        "afterColon": true,
         "mode": "strict"
       }
     ],
