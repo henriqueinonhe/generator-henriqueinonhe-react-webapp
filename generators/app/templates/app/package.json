@@ -1,33 +1,27 @@
 {
     "jest": {
         "roots": [
-            "./backend/tests",
-            "./core/tests",
-            "./frontend/tests"
+            "YOUR_TESTS_LOCATION"
         ],
         "transform": {
             "^.+\\.[jt]sx?$": "ts-jest"
         },
         "collectCoverageFrom": [
-            "./backend/src/**/*.ts",
-            "./core/src/**/*.ts",
-            "./frontend/src/**/*.ts"
+            "YOUR_TESTS_LOCATION"
         ],
         "testURL": "http://localhost:3000",
         "preset": "jest-puppeteer"
     },
     "scripts": {
-        "start": "node ./backend/index.js",
-        "dev-start": "nodemon ./backend/index.js",
+        "dev-start": "webpack serve --env.NODE_ENV=development",
+        "prod-start": "webpack serve --env.NODE_ENV=development",
         "unit-test": "jest -t=\\[Unit\\] --collectCoverage",
         "integration-test": "jest -t=\\[Integration\\]",
         "ui-test": "jest -t=\\[UI\\]",
         "test": "jest --collectCoverage",
         "dev-build": "webpack --env.NODE_ENV=development",
-        "dev-watch": "webpack --env.NODE_ENV=development --watch",
         "prod-build": "webpack --env.NODE_ENV=production",
-        "prod-watch": "webpack --env.NODE_ENV=production --watch",
-        "docs": "rm docs -r -f && typedoc"
+        "docs": "rm docs -rf && typedoc"
     },
     "devDependencies": {
         "@babel/core": "^7.11.4",

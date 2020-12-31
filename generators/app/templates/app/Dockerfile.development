@@ -1,9 +1,0 @@
-FROM node:lts-alpine
-
-EXPOSE 3000
-
-WORKDIR /usr/src/app
-
-USER node
-
-ENTRYPOINT [ "npm" , "run", "dev" ]
