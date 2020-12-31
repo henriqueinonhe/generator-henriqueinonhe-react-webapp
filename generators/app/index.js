@@ -54,6 +54,7 @@ module.exports = class extends Generator {
       //Eslint
       "eslint",
       "eslint-plugin-react",
+      "eslint-plugin-react-hooks",
       "@typescript-eslint/eslint-plugin",
       "@typescript-eslint/parser",
       //Babel
