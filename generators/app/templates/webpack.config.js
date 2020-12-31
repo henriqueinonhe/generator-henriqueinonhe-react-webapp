@@ -7,6 +7,7 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const ForkTsCheckerWebpackPlugin = require("fork-ts-checker-webpack-plugin");
 const CaseSensitivePathsPlugin = require("case-sensitive-paths-webpack-plugin");
 const WatchMissingNodeModulesPlugin = require("@nenado/watch-missing-node-modules-plugin");
+const EsLintWebpackPlugin = require("eslint-webpack-plugin");
 
 const config = env => {
   const srcPath = path.resolve(__dirname, "src");
@@ -32,9 +33,9 @@ const config = env => {
     use: {
       loader: "babel-loader",
       options: {
-        presets: [
-          "@babel/preset-react"
-        ],
+        // presets: [
+        //   "@babel/preset-react"
+        // ],
         plugins: [
           "babel-plugin-styled-components"
         ],
@@ -112,6 +113,9 @@ const config = env => {
         filename: "index.html",
         meta: { viewport: "width=device-width, initial-scale=1, user-scalable=no" },
         chunks: ["index"]
+      }),
+      new EsLintWebpackPlugin({
+        extensions: ['js', 'mjs', 'jsx', 'ts', 'tsx']
       })
     ],
     optimization: {

@@ -1,6 +1,6 @@
 {
   "name": "generator-henriqueinonhe-react-webapp",
-  "version": "2.0.4",
+  "version": "3.0.0",
   "description": "Personal yeoman generator to set up react apps.",
   "main": "index.js",
   "files": [

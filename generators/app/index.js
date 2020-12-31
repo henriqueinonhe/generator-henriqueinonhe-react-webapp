@@ -37,6 +37,7 @@ module.exports = class extends Generator {
       "case-sensitive-paths-webpack-plugin",
       "@nenado/watch-missing-node-modules-plugin",
       "webpack-dev-server",
+      "eslint-webpack-plugin",
       //Webpack Loaders
       "ts-loader",
       "babel-loader",
@@ -68,7 +69,8 @@ module.exports = class extends Generator {
       "@types/react-dom",
       "@types/styled-components",
       //Other
-      "dotenv"
+      "dotenv",
+      "puppeteer"
     ], {
       "save-dev": true
     });

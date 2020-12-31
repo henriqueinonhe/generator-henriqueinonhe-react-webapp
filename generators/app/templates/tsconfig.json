@@ -1,23 +1,27 @@
 {
   "compilerOptions": {
-    "outDir": "./dist/",
-    "noImplicitAny": true,
-    "module": "es6",
-    "target": "es5",
-    "jsx": "react",
-    "allowJs": true,
+    //Allows intermixing JS and TS files/syntax
+    "allowJs": true, 
+    //Checks JS files typing (as much as possible)
+    "checkJs": true,
+    //Enables JSX transpilation
+    "jsx": "react-jsx",
+    //ESNext modules for lazy loading
+    "module": "esnext",
     "sourceMap": true,
+    "target": "es6",
+    //Enables all strict checks
     "strict": true,
-    "strictNullChecks": true, 
+    //Module Interoperation
+    "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "moduleResolution": "node",
-    "downlevelIteration": true,
     "resolveJsonModule": true 
   },
-  "exclude": ["node_modules"],
+  "include": ["./src"],
   "typedocOptions": {
     "out": "docs",
-    "inputFiles":["./backend/src", "./core/src", "./frontend/src"],
+    "entryPoints":["./src"],
     "mode": "module",
     "ignoreCompilerErrors": true,
     "excludeNotExported": true

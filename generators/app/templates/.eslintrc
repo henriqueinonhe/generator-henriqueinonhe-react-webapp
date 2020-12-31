@@ -1,0 +1,159 @@
+{
+  "ignorePatterns": ["public", "webpack.config.js"],
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "impliedStrict": true,
+      "jsx": true
+    }
+  },
+  "parser": "@typescript-eslint/parser",
+  "env": {
+    "browser": true,
+    "jest": true
+  },
+  "plugins": [
+    "@typescript-eslint/eslint-plugin",
+    "eslint-plugin-react"
+  ],
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "rules": {
+    //Array proptotype methods that traverse the array (map, filter, reduce, etc)
+    //must always return something on their callback (except forEach)
+    "array-callback-return": [
+      "error",
+      {
+        "allowImplicit": true,
+        "checkForEach": true
+      }
+    ],
+    //Conditional branching must always use braces
+    "curly": [
+      "error",
+      "all"
+    ],
+    //Default parameters must always appear after normal parameters
+    "default-param-last": "error",
+    //Dot operator line breaks must be consistent and always on the property line
+    "dot-location": ["warn", "property"],
+    //Always use triple equality
+    "eqeqeq": ["error", "always"],
+    //Constructors must not return
+    "no-constructor-return": "error",
+    "no-else-return": "warn",
+    "no-empty-function": "warn",
+    "no-magic-numbers": [
+      "warn",
+      {
+        "ignoreArrayIndexes": true,
+        "ignoreDefaultValues": true
+      }
+    ],
+    "no-return-assign": "error",
+    "no-self-compare": "error",
+    //Disallow comma operator
+    "no-sequences": "error",
+    //Consistency in line breaks inside arrays
+    "array-bracket-newline": [
+      "warn",
+      "consistent"
+    ],
+    "array-element-newline": [
+      "warn",
+      "consistent"
+    ],
+    "brace-style": [
+      "warn",
+      "stroustrup"
+    ],
+    "camelcase": "warn",
+    "capitalized-comments": "warn",
+    "comma-spacing": [
+      "warn",
+      {
+          "before": false,
+          "after": true
+      }
+    ],
+    "comma-style": [
+      "warn",
+      "last"
+    ],
+    "func-call-spacing": [
+      "warn",
+      "never"
+    ],
+    "function-call-argument-newline": [
+      "warn",
+      "consistent"
+    ],
+    "function-paren-newline": [
+      "warn",
+      "consistent"
+    ],
+    "indent": [
+      "warn",
+      2,
+      {
+        "FunctionDeclaration": {
+            "parameters": "first"
+        },
+        "FunctionExpression": {
+            "parameters": "first"
+        },
+        "CallExpression": {
+            "arguments": "first"
+        },
+        "ArrayExpression": "first",
+        "ObjectExpression": "first"
+      }
+    ],
+    "key-spacing": [
+      "warn",
+      {
+        "beforeColon": "false",
+        "afterColon": "true",
+        "mode": "strict"
+      }
+    ],
+    "quotes": [
+      "warn",
+      "double",
+      {
+          "allowTemplateLiterals" : true
+      }
+    ],
+    "semi": [
+      "warn",
+      "always"
+    ],
+    "react/prop-types": "warn",
+    "@typescript-eslint/type-annotation-spacing": [
+      "warn",
+      {
+        "before": true,
+        "after": true
+      }
+    ],
+    "@typescript-eslint/consistent-type-assertions": [
+      "warn",
+      {
+        "assertionStyle": "as"
+      }
+    ],
+    "@typescript-eslint/no-non-null-assertion": "off",
+    "@typescript-eslint/no-empty-function": "warn",
+    "@typescript-eslint/explicit-function-return-type": [
+      "error",
+      {
+        "allowExpressions" : true
+      }
+    ]
+  }
+}
